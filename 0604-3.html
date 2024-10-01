@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and 語法練習 - 合作店家</title>
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .wrapper {
+            width: 1024px;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo {
+            height: 240px;
+            background-image: url(images/1.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        nav {
+            margin-top: 5px;
+            text-align: center;
+            /* margin-bottom: 10px;   是指上下間隔撐開*/
+            margin-bottom: 5px;
+        }
+
+        nav ul {
+            display: inline-block;
+        }
+
+        nav ul li {
+            float: left;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            display: block;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-decoration: none;
+        }
+
+        .content_in{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .content_in .box{
+            display: inline-block;
+            width: 32%;
+        }
+
+        .content_in .box .box_in{
+            position: relative;
+            width: 100%;
+            height: auto;
+            background-color: #64c3e0;
+            overflow: hidden;
+        }
+
+        .content_in .box .box_in .roller{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* background-color: rgba(0, 0, 0, 陰影 );  都0就會是黑色；都255會是白色*/
+            background-color: rgba(0, 0, 0, 0.2);
+            top: -100%;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            這三個是讓卷軸字體垂直置中 */
+        }
+        .content_in .box .box_in:hover .roller{
+            top: 0;
+            transition: top 2s;
+        }
+
+        .content_in .box .box_in_text h2, h4{
+            padding: 0;
+            margin: 5px;
+        }
+
+        .content_in .box .box_in_text{
+            padding: 15px;
+        }
+
+        .footer {
+            margin-top: 5px;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-02">
+    <div class="wrapper">
+        <div class="banner">
+            <div class="logo"></div>
+            <nav class="bg-01">
+                <ul>
+                    <li><a href="0604-1.html" class="bg-btn01">首頁</a></li>
+                    <li><a href="0604-2.html" class="bg-btn02">最新消息</a></li>
+                    <li><a href="0604-3.html" class="bg-btn03">合作店家</a></li>
+                    <li><a href="#" class="bg-btn01">關於我們</a></li>
+                    <li><a href="#" class="bg-btn01">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="content_in">
+                <div class="box">
+                    <div class="box_in">
+                        <div class="roller">
+                            <a href="http://192.168.10.79/food028/" class="bg-btn03">查看更多</a>
+                        </div>
+                        <div style="background-image: url(images/faye-yu-RyUUHrwOQqA-unsplash.jpg); height: 200px; background-position: center center; background-size: cover;"></div>
+                        <div class="box_in_text">
+                        <h2>最新消息-標題1</h2>
+                        <h4>電話: XXXXXX</h4>
+                        <h4>地址: XXXXXX</h4>
+                        <h4>簡介:我的心不願，它是告訴你使用遭遇相對傳說食品各類經濟，閲讀並不總是警察以前無派上傳，原理工作人員</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_in">
+                    <div class="roller">
+                        <a href="#" class="bg-btn03">查看更多</a>
+                    </div>
+                    <div style="background-image: url(images/zhou-xuan-zL_-j48AYtw-unsplash.jpg); height: 200px; background-position: center center; background-size: cover;"></div>
+                    <div class="box_in_text">
+                    <h2>最新消息-標題2</h2>
+                    <h4>電話: XXXXXX</h4>
+                    <h4>地址: XXXXXX</h4>
+                    <h4>簡介:我的心不願，它是告訴你使用遭遇相對傳說食品各類經濟，閲讀並不總是警察以前無派上傳，原理工作人員</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_in">
+                    <div class="roller">
+                        <a href="#" class="bg-btn03">查看更多</a>
+                    </div>
+                    <div style="background-image: url(images/zhang-kaiyv-wwwOs2LjMjs-unsplash.jpg); height: 200px; background-position: center center; background-size: cover;"></div>
+                    <div class="box_in_text">
+                    <h2>最新消息-標題3</h2>
+                    <h4>電話: XXXXXX</h4>
+                    <h4>地址: XXXXXX</h4>
+                    <h4>簡介:我的心不願，它是告訴你使用遭遇相對傳說食品各類經濟，閲讀並不總是警察以前無派上傳，原理工作人員，之。</h4>
+                </div>
+            </div>
+            </div>
+            <div class="box">
+                <div class="box_in">
+                    <div class="roller">
+                        <a href="#" class="bg-btn03">查看更多</a>
+                    </div>
+                    <div style="background-image: url(images/zhang-kaiyv-6AEZzGBUt0A-unsplash.jpg); height: 200px; background-position: center center; background-size: cover;"></div>
+                    <div class="box_in_text">
+                    <h2>最新消息-標題4</h2>
+                    <h4>電話: XXXXXX</h4>
+                    <h4>地址: XXXXXX</h4>
+                    <h4>簡介:飲我的心不願，它是告訴你使用遭遇相對傳說食品各類經濟，閲讀並不總是警察以前無派上傳，原理工作人員，之。</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_in">
+                    <div class="roller">
+                        <a href="#" class="bg-btn03">查看更多</a>
+                    </div>
+                    <div style="background-image: url(images/wang-bo-PY88brZQp70-unsplash.jpg); height: 200px; background-position: center center; background-size: cover;"></div>
+                    <div class="box_in_text">
+                    <h2>最新消息-標題5</h2>
+                    <h4>電話: XXXXXX</h4>
+                    <h4>地址: XXXXXX</h4>
+                    <h4>簡介:我的心不願，它是告訴你使用遭遇相對傳說食品各類經濟，閲讀並不總是警察以前無派上傳，原理工作人員，之。</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_in">
+                    <div class="roller">
+                        <a href="#" class="bg-btn03">查看更多</a>
+                    </div>
+                    <div style="background-image: url(images/vlog-tottiy-L39VmvYlfCk-unsplash.jpg); height: 200px; background-position: center center; background-size: cover;"></div>
+                    <div class="box_in_text">
+                    <h2>最新消息-標題6</h2>
+                    <h4>電話: XXXXXX</h4>
+                    <h4>地址: XXXXXX</h4>
+                    <h4>簡介:我的心不願，它是告訴你使用遭遇相對傳說食品各類經濟，閲讀並不總是警察以前無派上傳，原理工作人員，之。</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="footer bg-01">
+                <p>雲端技術應用實務班詩婷製作2024.06</p>
+            </div>
+        </div>
+</body>
+
+</html>

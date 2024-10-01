@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and CSS語法練習 -首頁</title>
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .wrapper {
+            width: 1024px;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .logo{
+            height: 240px;
+            background-image: url(images/4.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+        nav{
+            text-align: center;
+        }
+        nav ul{
+            display: inline-block;
+        }
+        nav ul li{
+            list-style-type: none;
+            float: left;
+        }
+        nav ul li a{
+            display: block;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        .content_in{
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-align: center; 
+        }
+        .content_in p{
+            font-size: 20px;
+        }  
+        .footer{
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 15px;
+            /*margin-top:往上推間隔  */
+            margin-top: 10px;
+        }
+        @media screen and (max-width:1024px){
+            .wrapper{
+                width: 100%;
+            }
+            .logo{
+                background-image: url(images/2.jpg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-02">
+    <div class="wrapper">
+        <div class="banner">
+            <!-- 一般 橫幅圖片 -->
+            <!-- <div class="logo">
+                <img src="https://fakeimg.pl/700x150/200" width="100%">
+            /div> -->
+            <!-- 背景 橫幅圖片 -->
+            <div class="logo bg-01"></div>
+            <!-- 選單 -->
+            <nav class="bg-01">
+                <ul>
+                    <li><a href="0604-1.html" class="bg-btn03">首頁</a></li>
+                    <li><a href="0604-2.html"class="bg-btn02">最新消息</a></li>
+                    <li><a href="0604-3.html"class="bg-btn03">合作店家</a></li>
+                    <li><a href="#"class="bg-btn01">關於我們</a></li>
+                    <li><a href="#"class="bg-btn01">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div> 
+        <div class="content">
+            <div class="content_in bg-03">
+                <h1 class="text-color01">歡迎光臨</h1>
+                <p class="text-color02">你好類別龍岡室內開發金錢玩具現實高效，一致資料緊緊推薦，規格當地不能事情能夠如今對待本公司內存，群發刷新石油內容道理歌手按鈕這段離開尋求退出首頁線路和你，帶來熱線模組臺灣民眾對象父親便 利商店使用，幾乎全面目錄發生團結所屬是我烏日尷尬，評估一句話沒想到。</p>
+                <p class="text-color02">居然線路網遊即可照片吃了，醫院笑容，明確效率級別就不實踐國務院，工業專題廣泛公路南方浪漫知道在我，有限責任公司創建將會房產周邊製造位元它的進了如今輕鬆一切都，信心左右諾基亞瞭解巨大不詳，之類心理。</p>
+                <p class="text-color02">交換保持路線吃螺絲巨大因此先後碩士公路伺服器，主板報名還要女孩子轎車看法長時間那個，主持精美註冊機會股票物流夏天鈴聲，觀察玩家群眾創新預防有機會我不這時德國委員會是怎麼大家晚上，這麼多一陣不僅產業她。</p>
+                <a herf="#" class="bg-btn03 ">了解更多</a>
+
+            </div>
+        </div>
+        <div class="footer bg-01">
+            <p>雲端技術應用實務班詩婷製作2024.06</p>
+        </div>
+    </div>
+</body>
+
+</html>    

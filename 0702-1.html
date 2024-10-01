@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食.SweetCake-簡餐</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-gift"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="0701-1.html"><i
+                            class="fa-solid fa-house text-success"></i>首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="0701-5.html"><i
+                            class="fa-solid fa-user text-primary me-1"></i>關於我們</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="0701-2.html" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-cloud text-warning me-1"></i>產品介紹
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="0701-3.html">美食</a></li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="0701-4.html">蛋糕</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="0701-2.html">套餐</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled"><i class="fa-solid fa-filter"></i>Disabled</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <div class="banner bg-info bg-cover"
+        style="height: 260px;background-image: linear-gradient(180deg,rgba(248, 144, 9, 0.3),rgba(18, 180, 221, 0.582)),url(images/jack-brind-eV7WTlVcydg-unsplash.jpg);">
+    </div>
+    <div class="container">
+        <h2 class="text-warning fw-900 my-3">|產品介紹<small class="text-muted">Product</small></h2>
+        <div class="row gy-3" id="mydata">
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="images/6450aea4-e636-4a4e-a775-6ffc3ce538a1.jpg"  style="height: 260px;" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <!-- <div class="card-text h3 fw-900 text-primary">鬆餅</div>
+                        <div class="card-text h4 fw-900">價格:99/片</div>
+              \          <div class="card-text"><span class="h4 fw-900">原料:</span>
+                            <span class="text-bg-success badge fw-500">鬆餅</span>
+                            <span class="text-bg-info badge fw-500">奶粉</span>
+                            <span class="text-bg-danger badge fw-500">奶油</span>
+                        </div>
+                        <div class="card-text h5 fw-900">簡介:只是南方環保對於我說命令答應，天天網遊。</div>
+                        <button class="btn btn-warning w-100 my-3">加入購物車</button> -->
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="footer text-bg-dark h4 text-center py-2">
+        雲端技術班製作 2024.07
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+          $(function(){
+            $.ajax({
+                type: "GET",
+                url: "js/bakery_products_zh.json",
+                dataType: "json",
+                success: showdata,
+                error: function(){
+                    console.log("error-js/bakery_products_zh.json");
+                }
+            });
+        });
+        function showdata(data){
+            
+            console.log(data);
+            $("#mydata").empty();
+           
+            for(var i =0; i< 40; i++){
+                var strHTML = 
+                '<div class="col-lg-4"><div class="card"><img src='+data[i].ImagePath+'  style="height: 260px;" class="card-img-top" alt=""><div class="card-body"><div class="card-text h3 fw-900 text-primary">'+data[i].ProductName+'</div><di\v class="card-text h4 fw-900">價格:'+data[i].Price+'</div><div class="card-text"><span class="h4 fw-900">原料:'+data[i].Ingredients+'</div><div class="card-text h5 fw-900">簡介:'+data[i].Description+'</div><button class="btn btn-warning w-100 my-3">加入購物車</button></div></div></div>';
+                $("#mydata").append(strHTML);
+            }
+        }
+    </script>
+</body>
+
+</html>
+

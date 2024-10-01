@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習03</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .timeline-section {
+            position: relative;
+        }
+
+        .timeline-section::before {
+            position: absolute;
+            content: "";
+            top: 10px;
+            bottom: 10px;
+            width: 4px;
+            background-color: var(--mycolor01);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-section-pointer {
+            position: relative;
+        }
+
+        .timeline-section-pointer::before {
+            position: absolute;
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-color: var(--mycolor08);
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 7px solid var(--mycolor03);
+            top: 10px;
+        }
+
+        .timeline-section-pointer:hover::before {
+            width: 36px;
+            height: 36px;
+            border: 10px solid var(--mycolor06);
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline-section::before {
+                left: -10px;
+            }
+
+            .timeline-section-pointer::before {
+                left: 3px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="timeline-section" id="mydata">
+            <div class="row align-items-center timeline-section-pointer">
+                <div class="col-md-6 mt-3">
+                    <div class="box_text">
+                        <div class="h2 text-center text-success fw-900">旅館名稱</div>
+                        <div class="h4">地址:XXXXXX</div>
+                        <div class="h4">電話:XXXXXX</div>
+                        <div class="h4">車位:小客車0輛、機車0輛、大客車0輛</div>
+                        <div class="h5 fw-300">簡介:
+                            但我不詳留言板有效人事結婚，回覆當時文章到底本頁，魔法並非理念馬上奇蹟，之處不足有着更新大多風險經銷商獎勵難以彼此觀念，情節是他我家，世紀忘記，屏幕配件一流不得國有不起隨後反應這個問題特點，研發成本。
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div class="boc_img bg-cover box_roller"
+                        style="background-image: url(images/2.jpg); height: 300px;">
+                        <div class="roller">
+                            <button class="btn btn-warning">查看更多</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+                <div class="col-md-6 mt-3">
+                    <div class="box_text">
+                        <div class="h3 text-center text-success fw-900">暑假專案兩天一夜02</div>
+                        <div class="h4">價格:
+                            <s>4999 </s>
+                            <span class="text-danger">3999</span>元
+                        </div>
+                        <div class="h5 fw-300">簡介:
+                            但我不詳留言板有效人事結婚，回覆當時文章到底本頁，魔法並非理念馬上奇蹟，之處不足有着更新大多風險經銷商獎勵難以彼此觀念，情節是他我家，世紀忘記，屏幕配件一流不得國有不起隨後反應這個問題特點，研發成本。
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div class="boc_img bg-cover box_roller"
+                        style="background-image: url(images/3.jpg); height: 300px;">
+                        <div class="roller">
+                            <button class="btn btn-warning">查看更多</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center timeline-section-pointer">
+                <div class="col-md-6 mt-3">
+                    <div class="box_text">
+                        <div class="h3 text-center text-success fw-900">暑假專案兩天一夜03</div>
+                        <div class="h4">價格:
+                            <s>4999 </s>
+                            <span class="text-danger">3999</span>元
+                        </div>
+                        <div class="h5 fw-300">簡介:
+                            但我不詳留言板有效人事結婚，回覆當時文章到底本頁，魔法並非理念馬上奇蹟，之處不足有着更新大多風險經銷商獎勵難以彼此觀念，情節是他我家，世紀忘記，屏幕配件一流不得國有不起隨後反應這個問題特點，研發成本。
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div class="boc_img bg-cover box_roller"
+                        style="background-image: url(images/4.jpg); height: 300px;">
+                        <div class="roller">
+                            <button class="btn btn-warning">查看更多</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+                <div class="col-md-6 mt-3">
+                    <div class="box_text">
+                        <div class="h3 text-center text-success fw-900">暑假專案兩天一夜04</div>
+                        <div class="h4">價格:
+                            <s>4999 </s>
+                            <span class="text-danger">3999</span>元
+                        </div>
+                        <div class="h5 fw-300">簡介:
+                            但我不詳留言板有效人事結婚，回覆當時文章到底本頁，魔法並非理念馬上奇蹟，之處不足有着更新大多風險經銷商獎勵難以彼此觀念，情節是他我家，世紀忘記，屏幕配件一流不得國有不起隨後反應這個問題特點，研發成本。
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div class="boc_img bg-cover box_roller"
+                        style="background-image: url(images/1.jpg); height: 300px;">
+                        <div class="roller">
+                            <button class="btn btn-warning">查看更多</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        var hotelData;
+        $(function () {
+            $.ajax({
+                type: "GET",
+                url: "js/hotel_C_f.json",
+                dataType: "json",
+                success: showdata,
+                error: function () {
+                    console.log("error-js/hotel_C_f.json");
+                }
+            });
+        });
+        function showdata(data) {
+            console.log(data.XML_Head.Infos.Info);
+            hotelData = data.XML_Head.Infos.Info;
+            console.log(hotelData);
+
+            var filtData = [];
+
+            //過濾資料
+            $("#mydata").empty();
+            hotelData.forEach(function (item) {
+                if (item.Region == "臺中市" && item.Town == "龍井區") {
+                    console.push(item);
+                }
+            });
+
+            console.log(filtData);
+
+            filtData.forEach(function (item, key) {
+                console.log(key);
+                var pic, strHTML;
+                if (item.Picture1 != "") {
+                    pic = item.Picture1;
+                } else {
+                    pic = "images/hotel005.avif"
+                }
+                if (counter % 2 == 0) {
+                    //偶數
+                    strHTML = '<div class="row align-items-center timeline-section-pointer flex-row-reverse"><div class="col-md-6 mt-3"><div class="box_text"><div class="h2 text-center text-success fw-900">' + item.Name + '</div><div class="h4">地址:' + item.Add + '</div><div class="h4">電話:' + item.Tel + '</div><div class="h4">車位:' + item.Parkinginfo + '</div><div class="h5 fw-300">簡介: ' + item.Description.substring(0, 50) + '</div></div></div><div class="col-md-6 mt-3"><div class="boc_img bg-cover box_roller" style="background-image: url(' + pic + '); height: 300px;"><div class="roller"><button class="btn btn-warning">查看更多</button></div></div></div></div>';
+
+                } else {
+                    //奇數
+                    strHTML = '<div class="row align-items-center timeline-section-pointer "><div class="col-md-6 mt-3"><div class="box_text"><div class="h2 text-center text-success fw-900">' + item.Name + '</div><div class="h4">地址:' + item.Add + '</div><div class="h4">電話:' + item.Tel + '</div><div class="h4">車位:' + item.Parkinginfo + '</div><div class="h5 fw-300">簡介: ' + item.Description.substring(0, 50) + '</div></div></div><div class="col-md-6 mt-3"><div class="boc_img bg-cover box_roller" style="background-image: url(' + pic + '); height: 300px;"><div class="roller"><button class="btn btn-warning">查看更多</button></div></div></div></div>';
+                }
+                $("#mydata").append(strHTML);
+
+                counter++;
+            }
+            )
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欄與列</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box {
+            /* height: 200px; ->整體版面大小 */
+            height: 200px;
+            /* margin-top: 15px;->指定方框格大小 */
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- col-? ->?數字代表要框定多大，會自己去排能塞幾個 -->
+        <div class="row">
+            <div class="col-2">
+                <div class="box bg-success"></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-success"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="box bg-primary"></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-primary"></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-primary"></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-primary"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="box bg-danger"></div>
+            </div>
+            <div class="col-4">
+                <div class="box bg-danger"></div>
+            </div>
+            <div class="col-4">
+                <div class="box bg-danger"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="box bg-info"></div>
+            </div>
+            <div class="col-6">
+                <div class="box bg-info"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="box bg-warning"></div>
+            </div>
+            <div class="col-3">
+                <div class="box bg-warning"></div>
+            </div>
+            <div class="col-5">
+                <div class="box bg-warning"></div>
+            </div>
+            <div class="col-2">
+                <div class="box bg-warning"></div>
+            </div>
+        </div>
+    </div>
+    <h2>隨便切</h2>
+    <div class="row">
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+    </div>
+    </div>
+    <h2>框裡打字</h2>
+    <div class="row">
+        <div class="col-auto">
+            <div class="box bg-primary">
+                實業點點，污染三人水溝重要播放，嚴重欄目，採購車輛，稱為窗。
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="box bg-primary">
+                決定在那裡宅宅死了發佈日期，都說女友眼神開始理由同意進入意。
+            </div>
+        </div>
+    </div>
+    <h2>巢狀排版</h2>
+    <div class="row">
+        <div class="col-2">
+            <div class="box bg-success"></div>
+        </div>
+        <h3>(框裡有框)編排往下幾個就一直新增下去</h3>
+        <div class="col-10 bg-info">
+            <div class="row">
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+                <div class="col-4">
+                    <div class="box bg-warning"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

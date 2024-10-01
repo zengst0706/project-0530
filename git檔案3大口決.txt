@@ -1,0 +1,6 @@
+ubuntu檔案位置C->user-< VirtualBox VMs->裡面
+ 記憶體 4096
+
+1. git status
+2. git add
+3. git commit -"註解"

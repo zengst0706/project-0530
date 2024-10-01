@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA MA 貓屋</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .s11_text,
+        .s05_text {
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            padding: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .s07_text,
+            .s09_text {
+                z-index: 10;
+                background-color: rgba(0, 0, 0, 0.3);
+                color: white;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- *************s01*************************** -->
+    <section id="s01" class="bg-secondary">
+        <div class="container text-end">
+            <a href="#">
+                <i class="fa-brands fa-square-facebook text-white"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-square-x-twitter text-white"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- *************s02*************************** -->
+    <section id="s02" class="bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa-solid fa-champagne-glasses fa-2x text-danger me-2"></i>MA MA貓屋</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s02">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s03">營業介紹</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s11">加入我們</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    高級VIP功能
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item disabled" id="s02_btn01" href="0718-product.html"
+                                            target="_blank">產品建檔</a></li>
+                                    <li><a class="dropdown-item disabled" id="s02_btn02"
+                                            href="0820-member-control-panel.html" target="_blank">會員管理</a></li>
+                                    <li><a class="dropdown-item disabled" id="s02_btn03" href="0827-1.html">高級功能03</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div>
+                            <span class="h3 text-success fw-900">會員: <span class="h1 text-danger fw-900"
+                                    id="s02_login_username">XXX</span> </span>
+                            <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#loginModal"
+                                id="s02_login_btn">登入</button>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registerModal"
+                                id="s02_register_btn">註冊</button>
+                            <button class="btn btn-primary d-none" id="s02_logout_btn">登出</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+
+    <!-- loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-bg-warning">
+                    <h1 class="modal-title fs-5 fw-900 text-white" id="exampleModalLabel">會員登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="loginModal_username" class="form-label">帳號</label>
+                        <input type="text" name="loginModal_username" id="loginModal_username" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginModal_password" class="form-label">密碼</label>
+                        <input type="password" name="loginModal_password" id="loginModal_password" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="loginModal_ok_btn">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header text-bg-success">
+                    <h1 class="modal-title fs-5 fw-900 text-white" id="exampleModalLabel">會員註冊</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3>會員守則</h3>
+                            <p>歡迎加入我們的派對主辦平台！為確保愉快、安全的體驗，請遵守以下守則：</p>
+                            <h4>1. 資格與註冊</h4>
+                            <ul>
+                                <li>您必須年滿 18 歲。</li>
+                                <li>提供真實、完整且準確的個人資料。</li>
+                                <li>定期更新資料以保持準確性。</li>
+                            </ul>
+                            <h4>2. 帳號安全</h4>
+                            <ul>
+                                <li>妥善保管帳號及密碼，勿與他人分享。</li>
+                                <li>如發現帳號異常，請立即通知我們。</li>
+                            </ul>
+                            <h4>3. 行為準則</h4>
+                            <ul>
+                                <li>禁止發布或傳送任何非法、騷擾、中傷等內容。</li>
+                            </ul>
+                            <div class="form-check">
+                                <input type="checkbox" name="registerModal_chk" id="registerModal_chk"
+                                    class="form-check-input is-invalid">
+                                <label for="registerModal_chk" class="form-check-label">同意</label>
+                                <div class="valid-feedback">同意遵守規定</div>
+                                <div class="invalid-feedback">不同意遵守規定</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="registerModal_username" class="form-label">帳號</label>
+                                <input type="text" name="registerModal_username" id="registerModal_username"
+                                    class="form-control is-invalid" placeholder="字數3-8">
+                                <div class="valid-feedback">符合規定</div>
+                                <div class="invalid-feedback">不符合規定</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerModal_password" class="form-label">密碼</label>
+                                <input type="password" name="registerModal_password" id="registerModal_password"
+                                    class="form-control is-invalid" placeholder="字數3-8">
+                                <div class="valid-feedback">符合規定</div>
+                                <div class="invalid-feedback">不符合規定</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerModal_re_password" class="form-label">確認密碼</label>
+                                <input type="password" name="registerModal_re_password" id="registerModal_re_password"
+                                    class="form-control is-invalid" placeholder="確認密碼">
+                                <div class="valid-feedback">符合規定</div>
+                                <div class="invalid-feedback">不符合規定</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerModal_email" class="form-label">email</label>
+                                <input type="email" name="registerModal_email" id="registerModal_email"
+                                    class="form-control is-invalid" placeholder="字數3-15">
+                                <div class="valid-feedback">符合規定</div>
+                                <div class="invalid-feedback">不符合規定</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="registerModal_ok_btn">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- *************s03*************************** -->
+    <section id="s03" class="d-none">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item bg-cover active"
+                    style="background-image: url('images/貓屋11.jpg'); height: 50vh; background-size: contain; background-repeat: no-repeat;">
+                    <div class="carousel-caption p-3 rounded-2 shadow-lg d-none d-md-block"
+                        style="background-color: rgba(0, 0, 0, 0.3);">
+                        <h5>我們致力於提供最溫馨和舒適的貓咪住宿體驗</h5>
+                        <p>我們的使命是為每一隻貓咪提供一個安全、舒適的臨時家，讓牠們在我們的照顧下健康快樂。我們相信，每隻貓咪都值得最好的照顧，而我們的目標就是讓貓咪和主人都感到滿意和安心。</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item bg-cover"
+                    style="background-image: url('images/貓屋22.jpg'); height: 50vh; background-size: contain; background-repeat: no-repeat;">
+                    <div class="carousel-caption p-3 rounded-2 shadow-lg d-none d-md-block"
+                        style="background-color: rgba(0, 0, 0, 0.3);">
+                        <h5>為什麼選擇我們？</h5>
+                        <p>專業照顧：我們的團隊由經驗豐富的貓咪愛好者和專業人士組成，確保每隻貓咪都能獲得細緻的照顧。我們提供全天候的照顧，並且每隻貓咪都會得到個性化的關注。</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item bg-cover"
+                    style="background-image: url('images/貓屋33.jpg'); height: 50vh; background-size: contain; background-repeat: no-repeat;">
+                    <div class="carousel-caption p-3 rounded-2 shadow-lg d-none d-md-block"
+                        style="background-color: rgba(0, 0, 0, 0.3);">
+                        <h5>為什麼選擇我們？</h5>
+                        <p>舒適環境：我們的貓舍設有寬敞舒適的住宿區域，配備最新的貓咪娛樂設施，如爬架、玩具和舒適的貓咪床。每個小角落都經過精心設計，讓貓咪感到賓至如歸。</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item bg-cover"
+                    style="background-image: url('images/貓屋44.jpg'); height: 50vh; background-size: contain; background-repeat: no-repeat;">
+                    <div class="carousel-caption p-3 rounded-2 shadow-lg d-none d-md-block"
+                        style="background-color: rgba(0, 0, 0, 0.3);">
+                        <h5>為什麼選擇我們？</h5>
+                        <p>健康保障：我們重視每隻貓咪的健康，提供定期的健康檢查和必要的醫療護理。我們的設施配備了先進的清潔設備，確保環境的衛生和安全。</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item bg-cover"
+                    style="background-image: url('images/貓屋55.jpg'); background-size: cover; background-position: center; height: 50vh; background-size: contain; background-repeat: no-repeat;">
+                    <div class="carousel-caption p-3 rounded-2 shadow-lg d-none d-md-block"
+                        style="background-color: rgba(0, 0, 0, 0.3);">
+                        <h5>我們還有額外服務</h5>
+                        <p>額外服務：除了基本的寄養服務，我們還提供美容護理、專業訓練和貓咪心理輔導等附加服務，滿足貓咪的多樣需求。</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- *************s04*************************** -->
+    <section id="s04" class="d-none"
+        style="background: linear-gradient(to right, #F2CA99, #BF793B, #D99F6C, #A65A2E, #73341D); height: auto; padding: 20px 0;">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-5" style="height: 200px; overflow: hidden;">
+                    <img src="images/貓咪派對.jpg" alt="貓咪派對"
+                        style="width: 100%; height: auto; display: block; object-fit: cover;">
+                </div>
+                <div class="col-md-7 p-5">
+                    <h1 class="animate__animated animate__bounce text-color05">🐾 貓舍 <span
+                            class="text-color07">毛茸茸的小夥伴</span></h1>
+                    <h1 class="text-color08">喵喵的夢想樂園</h1>
+                    <p class="mb-1">貓咪的奇幻冒險</p>
+                    <p class="mb-1">寵物科技的萌化演進</p>
+                    <p class="mb-1">未來貓咪的幸福生活</p>
+                    <div class="row mt-5 text-center">
+                        <div class="col-3">
+                            <h4>年均活動</h4>
+                            <h2 class="counter01">99 <span class="h4">場</span></h2>
+                        </div>
+                        <div class="col-3">
+                            <h4>獲獎數目</h4>
+                            <h2 class="counter02">20 <span class="h4">場</span></h2>
+                        </div>
+                        <div class="col-3">
+                            <h4>專業認證</h4>
+                            <h2 class="counter03">16 <span class="h4">項</span></h2>
+                        </div>
+                        <div class="col-3">
+                            <h4>貓舍據點</h4>
+                            <h2 class="counter04">12 <span class="h4">處</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *************s05*************************** -->
+    <section id="s05" class="d-none"
+        style="background-image: url(images/cat.png); background-size: cover; background-position: center center; background-attachment: fixed;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 s05_text">
+                    <p>讓我們一起探索貓咪的世界，感受每隻毛茸茸的小夥伴帶來的幸福與歡樂！</p>
+                </div>
+                <div class="col-md-8">
+                    <div class="timeline-section">
+                        <div class="row align-items-center timeline-section-pointer">
+                            <div class="col-md-6 mt-3">
+                                <div class="box_text">
+                                    <div class="h3 text-center text-success fw-900 wow animate__bounce"
+                                        data-wow-duration="1s" data-wow-delay="0s" data-wow-iteration="5">貓咪樂園：毛茸茸的冒險
+                                    </div>
+                                    <div class="h4 text-color02 wow animate__heartBeat" data-wow-duration="1s"
+                                        data-wow-delay="0s" data-wow-iteration="5">價格:<s>1000</s>
+                                        <span class="text-color07">500</span>元
+                                    </div>
+                                    <div class="h5 fw-300 text-color04">
+                                        《貓咪樂園：初級探索區》 這個區域專為小貓咪設計，裡面有柔軟的玩具和小型爬架，讓貓咪們可以自由探索和玩耍。小朋友們可以觀察貓咪們的可愛互動，享受親密的陪伴時光。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <div class="boc_img bg-cover box_roller"
+                                    style="background-image: url(images/豹貓.jpg); height: 300px;">
+                                    <div class="roller">
+                                        <button class="btn btn-warning">查看更多</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+                            <div class="col-md-6 mt-3">
+                                <div class="box_text">
+                                    <div class="h3 text-center text-success fw-900 wow animate__bounce"
+                                        data-wow-duration="1s" data-wow-delay="0s" data-wow-iteration="5">貓咪樂園：毛茸茸的冒險
+                                    </div>
+                                    <div class="h4 text-color02 wow animate__heartBeat" data-wow-duration="1s"
+                                        data-wow-delay="0s" data-wow-iteration="5">價格:<s>2000</s>
+                                        <span class="text-color07">1000</span>元
+                                    </div>
+                                    <div class="h5 fw-300 text-color04">
+                                        《貓咪樂園：中級冒險區》
+                                        這裡有更大的遊樂設施，包括隧道、球池和跳台，讓貓咪們可以充分發揮活力。除了豐富的玩具，還有專業的貓咪訓練師，帶領貓咪參加趣味比賽，讓每隻貓咪都能展現最佳風采！
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <div class="boc_img bg-cover box_roller"
+                                    style="background-image: url(images/曼切肯.jpg); height: 300px;">
+                                    <div class="roller">
+                                        <button class="btn btn-warning">查看更多</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center timeline-section-pointer">
+                            <div class="col-md-6 mt-3">
+                                <div class="box_text">
+                                    <div class="h3 text-center text-success fw-900 wow animate__bounce"
+                                        data-wow-duration="1s" data-wow-delay="0s" data-wow-iteration="5">貓咪樂園：毛茸茸的冒險
+                                    </div>
+                                    <div class="h4 text-color02 wow animate__heartBeat" data-wow-duration="1s"
+                                        data-wow-delay="0s" data-wow-iteration="5">價格:<s>3000</s>
+                                        <span class="text-color07">1500</span>元
+                                    </div>
+                                    <div class="h5 fw-300 text-color04">
+                                        《貓咪樂園：高級冒險區》
+                                        在這個專屬區域，貓咪可以享受豪華的活動空間，包括大規模的攀爬架、專業遊樂設施和互動遊戲。這裡還有特別的貓咪沙池和專屬活動，讓貓咪們探索無限的樂趣，並能參加定期舉辦的貓咪比賽，贏取獎品！
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <div class="boc_img bg-cover box_roller"
+                                    style="background-image: url(images/俄羅斯藍貓.jpg); height: 300px;">
+                                    <div class="roller">
+                                        <button class="btn btn-warning">查看更多</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *************s06*************************** -->
+    <section id="s06" class="d-none" style="background-color: #D8C2B5;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 text-center mt-4 mb-3">
+                    <i class="fa-solid fa-paw fa-8x text-danger mb-3 wow animate__zoomIn" data-wow-duration="1s"
+                        data-wow-delay="0s"></i>
+                    <div class="h3 fw-900 mb-3 text-color08 wow animate__zoomIn" data-wow-duration="1s"
+                        data-wow-delay="0.2s">卓越服務，締造貓咪樂趣</div>
+                    <div class="h3 fw-900 mb-3 fs-5 text-color05 wow animate__zoomIn" data-wow-duration="1s"
+                        data-wow-delay="0.4s">
+                        我們致力於提供卓越的貓咪樂園體驗，無論是小型聚會還是大型活動，我們都力求每個細節完美無缺。
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center mt-4 mb-3">
+                    <i class="fa-solid fa-star fa-8x text-success mb-3 wow animate__slideInUp" data-wow-duration="1s"
+                        data-wow-delay="0s"></i>
+                    <div class="h3 fw-900 mb-3 text-color08 wow animate__slideInUp" data-wow-duration="1s"
+                        data-wow-delay="0.2s">創新為本，引領貓咪新潮流</div>
+                    <div class="h3 fw-900 mb-3 fs-5 text-color05 wow animate__slideInUp" data-wow-duration="1s"
+                        data-wow-delay="0.4s">
+                        我們公司始終以創新為核心理念，不斷推出新穎獨特的貓咪活動和遊樂設施。
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center mt-4 mb-3">
+                    <i class="fa-solid fa-heart fa-8x text-warning mb-3 wow animate__bounce" data-wow-duration="1s"
+                        data-wow-delay="0s"></i>
+                    <div class="h3 fw-900 mb-3 text-color08 wow animate__bounce" data-wow-duration="1s"
+                        data-wow-delay="0.2s">客戶至上，用心服務每一刻</div>
+                    <div class="h3 fw-900 mb-3 fs-5 text-color05 wow animate__bounce" data-wow-duration="1s"
+                        data-wow-delay="0.4s">
+                        我們以客戶至上為宗旨，從第一刻起以專業態度和真誠心意服務每位貓咪與主人。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *************s07*************************** -->
+    <section id="s07" class="d-none" style="position: relative; background-color: #D8C2B5;">
+        <div class="row">
+            <div class="col-md-5 bg-cover wow animate__fadeIn" data-wow-duration="1s" data-wow-delay="0s"
+                data-wow-iteration="1"
+                style="position: absolute; background-image: url(images/貓舍1.jpg); top: 0; bottom: 0;"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-md-7 my-5 s07_text wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="h3 animate__animated animate__bounce text-color07">貓咪的夢幻樂園</div>
+                    <p class="text-color08">
+                        在這個充滿樂趣的貓咪樂園裡，貓咪們可以自由探索，從柔軟的玩具到刺激的攀爬架，每一個角落都充滿了驚喜。貓咪們在這裡結交新朋友，享受無憂無慮的快樂時光，讓每一天都充滿了冒險和歡笑。
+                    </p>
+                    <button class="btn btn-outline-info wow animate__pulse" data-wow-duration="1s"
+                        data-wow-delay="1s">查看更多</button>
+                    <div class="row mt-5">
+                        <div class="col-md-6 wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <div class="h3 text-color09">探索樂趣：貓咪的玩耍之旅</div>
+                            <p class="text-color03">
+                                描述可愛貓咪在樂園中的冒險故事。從攀爬到隧道，牠們在這裡無限探索，體驗玩耍的樂趣，展現出無窮的活力和好奇心。
+                            </p>
+                        </div>
+                        <div class="col-md-6 wow animate__fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <div class="h3 text-color09">友誼與玩樂：貓咪的快樂時光</div>
+                            <p class="text-color03">
+                                描述貓咪們在樂園中的友誼故事。牠們一起玩耍、互相追逐，享受無憂的時光，成為彼此最好的夥伴，分享快樂的每一刻。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *************s08*************************** -->
+    <section id="s08" class="d-none" style="background-color: #D8C2B5;">
+        <div class="container py-4">
+            <div class="h2 fw-900 text-center text-warning">主要服務項目</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <i class="fa-solid fa-paw fa-6x text-danger me-4"></i>
+                        <div>
+                            <div class="h3 text-color01">貓咪健康檢查：確保健康快樂</div>
+                            <p>提供全面的貓咪健康檢查服務，包括疫苗接種、健康評估和定期檢查，確保貓咪保持最佳狀態，健康快樂。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <i class="fa-solid fa-bowl-food fa-6x text-success me-4"></i>
+                        <div>
+                            <div class="h3 text-color01">專業貓咪餐飲：美味與營養兼具</div>
+                            <p>提供多樣化的貓咪餐飲選擇，從健康的乾糧到美味的罐頭，確保每隻貓咪都能享受到營養均衡的飲食。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <i class="fa-solid fa-toy fa-6x text-primary me-4"></i>
+                        <div>
+                            <div class="h3 text-color01">玩具與娛樂：讓貓咪樂翻天</div>
+                            <p>提供各式各樣的貓咪玩具和娛樂設施，從抓板到跳台，讓貓咪在樂園中自由玩耍，保持活力與快樂。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <i class="fa-solid fa-heart fa-6x text-danger me-4"></i>
+                        <div>
+                            <div class="h3 text-color01">愛心寄養服務：為貓咪提供溫暖家</div>
+                            <p>提供安全舒適的寄養環境，讓您的貓咪在您不在時也能感受到關愛與溫暖，安心度過每一天。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *************s09*************************** -->
+    <section id="s09" class="d-none" style="background-color: #D8C2B5;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 s09_text">
+                    <dl class="row">
+                        <dt class="col-sm-3">服務價格介紹</dt>
+                        <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+                        <dt class="col-sm-3">Term</dt>
+                        <dd class="col-sm-9">
+                            <p>Definition for the term.</p>
+                            <p>And some more placeholder definition text.</p>
+                        </dd>
+
+                        <dt class="col-sm-3">Another term</dt>
+                        <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+
+                        <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+                        <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+
+                        <dt class="col-sm-3">Nesting</dt>
+                        <dd class="col-sm-9">
+                            <dl class="row">
+                                <dt class="col-sm-4">Nested definition list</dt>
+                                <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list
+                                    inside your definition list.</dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-md-5 bg-cover" style="position: absolute ;background-image: url(images/vlad-grebenyev-4QAcCRFeYz8-unsplash.jpg);
+            top: 0; bottom: 0;"></div>
+        </div>
+    </section>
+
+    <!-- *************s10*************************** -->
+    <section id="s10" class="d-none" style="background-color: #D8C2B5;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29118.365935967766!2d120.5799561738968!3d24.178895246025856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e1e5070a7a7%3A0xa462167a0845084d!2z6Lev5oCd576p5pWZ5aCC!5e0!3m2!1szh-TW!2stw!4v1722912405626!5m2!1szh-TW!2stw"
+                        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="" class="form-label">貓咪的主人姓名</label>
+                        <input type="text" class="form-control" placeholder="請輸入您的名字">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">聯絡電話</label>
+                        <input type="tel" class="form-control" placeholder="請輸入您的電話">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">電子郵件</label>
+                        <input type="email" class="form-control" placeholder="請輸入您的電子郵件">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">貓咪人數</label>
+                        <input type="number" class="form-control" placeholder="請輸入貓咪人數">
+                    </div>
+                    <button class="btn btn-secondary w-100 mt-3">取消</button>
+                    <button class="btn btn-info w-100 mt-3">確認</button>
+                </div>
+
+                <!-- *************s11*************************** -->
+                <section id="s14" class="container d-none" style="background-color: #D8C2B5;">
+                    <div class="h3 fw-900 my-3 text-color02">|貓舍細節
+                        <small class="text-color05">我們的貓舍提供寬敞的空間、舒適的床位、先進的貓咪娛樂設施，以及專業的照顧服務，為貓咪打造一個安心的臨時家。</small>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"> <!-- 設定為 col-md-12 以確保滿版 -->
+                            <table style="width: 100%; border-collapse: collapse;">
+                        </div>
+                    </div>
+                </section>
+                <div class="d-flex my-4 wow animate__fadeIn" data-wow-duration="1s">
+                    <img src="images/緬因貓.jpg" id="imgFull" class="img-fluid" alt="貓舍圖片">
+                    <div class="text-right ml-3" style="font-family: 'Arial', sans-serif;">
+                        <h5 class="text-primary" style="font-size: 2rem; font-weight: bold;">
+                            緬因貓
+                        </h5>
+                        <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.6;">
+                            這隻可愛的緬因貓是我們貓舍的一部分，性格友善，喜歡與人互動。牠們特別適合家庭，並且非常好照顧。
+                        </p>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled d-flex justify-content-between flex-nowrap overflow-auto my-3">
+                    <li>
+                        <img class="bg-cover" onclick="changeImg('cat1')" src="images/布偶貓.jfif" alt="貓咪圖片1"
+                            style="height: 100px; cursor: pointer;">
+                    </li>
+                    <li>
+                        <img class="bg-cover" onclick="changeImg('cat2')" src="images/美短.jpg" alt="貓咪圖片2"
+                            style="height: 100px; cursor: pointer;">
+                    </li>
+                    <li>
+                        <img class="bg-cover" onclick="changeImg('cat3')" src="images/蘇格蘭摺耳貓.jpg" alt="貓咪圖片3"
+                            style="height: 100px; cursor: pointer;">
+                    </li>
+                    <li>
+                        <img class="bg-cover" onclick="changeImg('cat4')" src="images/西伯利亞貓.jpg" alt="貓咪圖片4"
+                            style="height: 100px; cursor: pointer;">
+                    </li>
+                    <li>
+                        <img class="bg-cover" onclick="changeImg('cat5')" src="images/英國長毛貓.jpg" alt="貓咪圖片5"
+                            style="height: 100px; cursor: pointer;">
+                    </li>
+                    <li>
+                        <img class="bg-cover" onclick="changeImg('cat6')" src="images/金吉拉.jpg" alt="貓咪圖片6"
+                            style="height: 100px; cursor: pointer;">
+                    </li>
+                    <li>
+                        <img class="bg-cover" onclick="changeImg('cat7')" src="images/米克斯貓.jpg" alt="貓咪圖片7"
+                            style="height: 100px; cursor: pointer;">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- *************s12*************************** -->
+    <section id="s12" class="row d-none" style="background-color: #D8C2B5;">
+        <div class="col-lg-4">
+            <div class="card">
+                <img src="images/波斯貓.jpg" style="height: 260px;" class="card-img-top" alt="波斯貓">
+                <div class="card-body">
+                    <div class="card-text h3 fw-bold text-color05" style="font-family: 'Georgia', serif;">波斯貓</div>
+                    <div class="card-text h4 fw-bold text-color07">價格: 12000-40000/隻</div>
+                    <div class="card-text h5 fw-bold text-color08" style="line-height: 1.5;">
+                        簡介: 這種貓咪以其友好的性格和迷人的外觀而聞名。它們喜歡與人互動，並且非常適合家庭生活，是極佳的寵物選擇。
+                    </div>
+                    <button class="btn btn-warning w-100 my-3">加入購物車</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <img src="images/暹羅貓.jpg" style="height: 260px;" class="card-img-top" alt="暹羅貓">
+                <div class="card-body">
+                    <div class="card-text h3 fw-bold text-color05" style="font-family: 'Georgia', serif;">暹羅貓</div>
+                    <div class="card-text h4 fw-bold text-color07">價格: 13000-60000/隻</div>
+                    <div class="card-text h5 fw-bold text-color08" style="line-height: 1.5;">
+                        簡介：這隻暹羅貓充滿活力，喜歡玩耍和探索。牠的好奇心和靈活身手使牠成為有趣的伴侶，總是帶來歡樂和驚喜。
+                    </div>
+                    <button class="btn btn-warning w-100 my-3">加入購物車</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <img src="images/英短.jpg" style="height: 260px;" class="card-img-top" alt="英短">
+                <div class="card-body">
+                    <div class="card-text h3 fw-bold text-color05" style="font-family: 'Georgia', serif;">英國短毛貓</div>
+                    <div class="card-text h4 fw-bold text-color07">價格: 10000-50000/隻</div>
+                    <div class="card-text h5 fw-bold text-color08" style="line-height: 1.5;">
+                        簡介: 這種貓咪以其優雅的姿態和沉著的性格著稱。它們喜歡安靜的環境，是喜愛寧靜生活人士的最佳伴侶。
+                    </div>
+                    <button class="btn btn-warning w-100 my-3">加入購物車</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- *************s13*************************** -->
+    <section id="s13" style="position: relative" class="d-none" style="background-color: #D8C2B5;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 s09_text">
+                    <dl class="row">
+                        <dt class="col-sm-3">服務價格介紹</dt>
+                        <dd class="col-sm-9">貓咪的服務包括常規健康檢查、疫苗接種、絕育手術等。常見的費用範圍為：</dd>
+
+                        <dt class="col-sm-3">健康檢查：</dt>
+                        <dd class="col-sm-9">
+                            <p>$50-$3000</p>
+                        </dd>
+
+                        <dt class="col-sm-3">疫苗接種：</dt>
+                        <dd class="col-sm-9">$200-$1500</dd>
+
+                        <dt class="col-sm-3 text-truncate">絕育手術：</dt>
+                        <dd class="col-sm-9">$3000-$8000</dd>
+
+                        <dt class="col-sm-3">寄養服務：</dt>
+                        <dd class="col-sm-9">
+                            <dl class="row">
+                                <dt class="col-sm-4">$900/晚</dt>
+                            </dl>
+                        </dd>
+                        <dt class="col-sm-6">專業維護對貓咪的健康至關重要。</dt>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-md-3 bg-cover"
+                style="position: absolute; background-image: url(images/cat-background.jpg); top: 0; bottom: 0;">
+            </div>
+        </div>
+    </section>
+
+    <!-- *************s14*************************** -->
+    <section id="col-md-6 bg-cover" style="background-color: #D8C2B5;"></section>
+    <div class="row">
+        <div class="col-md-6 bg-cover" style="background-image: url(images); height: 300px;">
+            <div class="row align-items-center mt-3 ms-2">
+                <div class="col-7 s11_text">
+                    <small class="text-danger fw-900">一起來玩吧！</small>
+                    <div class="h3 fw-900">誠徵貓咪樂園業務經理</div>
+                    <p>職務介紹：
+                        加入我們的團隊，與貓咪一起創造快樂的時光！我們正在尋找熱愛動物的人才，帶領我們的貓咪樂園邁向新高峰。
+                    </p>
+                    <a href="#" class="btn btn-outline-success">查看詳情</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 bg-cover" style="background-image: url(images/cat-park-2.jpg); height: 300px;">
+            <div class="row justify-content-end mt-5 ms-2">
+                <div class="col-7 s11_text">
+                    <small class="text-danger fw-900">一起來玩吧！</small>
+                    <div class="h3 fw-900">誠徵貓咪樂園業務經理</div>
+                    <p>職務介紹：
+                        如果你對貓咪充滿熱情，並且希望在快樂的環境中工作，這裡就是你的舞台！快來加入我們吧！
+                    </p>
+                    <a href="#" class="btn btn-outline-success">查看詳情</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- 橫向選單 -->
+
+    <!-- *************s15*************************** -->
+    <section id="s15" class="d-none" style="background-color: #D8C2B5;">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link disabled">雲端班製作2024.08</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">購物車</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">貓咪愛好者站一</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">貓咪愛好者站二</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">貓咪愛好者站三</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">貓咪愛好者站四</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <!-- *************s16 停權帳號警告畫片*************************** -->
+    <section id="s16" class="d-none">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="display-1 fw-900 text-danger text-center">
+                    你的帳號已經被停權了!
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        var flag_username = false;
+        var flag_password = false;
+        var flag_re_password = false;
+        var flag_email = false;
+        var flag_chk = false;
+        $(function () {
+            //wow
+            new WOW().init();
+            //s04 counter up
+            const counterUp = window.counterUp.default
+
+            const callback = entries => {
+                entries.forEach(entry => {
+                    const el = entry.target
+                    if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+                        counterUp(el, {
+                            duration: 2000,
+                            delay: 16,
+                        })
+                        el.classList.add('is-visible')
+                    }
+                })
+            }
+
+            const IO = new IntersectionObserver(callback, { threshold: 1 })
+
+
+            const el01 = document.querySelector('.counter01')
+            IO.observe(el01)
+            const el02 = document.querySelector('.counter02')
+            IO.observe(el02)
+            const el03 = document.querySelector('.counter03')
+            IO.observe(el03)
+            const el04 = document.querySelector('.counter04')
+            IO.observe(el04)
+
+            //確認uid是否存在且合法
+            if (getCookie("uid01") != "") {
+                //將uid01傳遞至後端api確認是否合法
+                var dataJSON = {};
+                dataJSON["uid01"] = getCookie("uid01");
+                console.log(JSON.stringify(dataJSON));
+
+                $.ajax({
+                    type: "POST",
+                    url: "member-login-check-uid-api.php",
+                    data: JSON.stringify(dataJSON),
+                    dataType: "json",
+                    success: showdata_check_uid,
+                    error: function () {
+                        alert("error-member-login-check-uid-api.php");
+                    }
+                });
+            } else {
+                alert("尚未登入, 請登入會員來使用附加功能!");
+            }
+
+            //**********************************註冊功能***********************************************
+            //監聽username
+            $("#registerModal_username").bind("input propertychange", function () {
+                if ($(this).val().length > 2 && $(this).val().length < 9) {
+                    //符合前端規定
+                    //傳遞至後端API確認帳號是否可以使用
+                    var dataJSON = {};
+                    dataJSON["username"] = $("#registerModal_username").val();
+                    console.log(JSON.stringify(dataJSON));
+                    //傳遞至後端API
+                    $.ajax({
+                        type: "POST",
+                        url: "member-register-checkuni-api.php",
+                        data: JSON.stringify(dataJSON),
+                        dataType: "json",
+                        success: showdata_checkuni,
+                        error: function () {
+                            alert("error-member-register-checkuni-api.php");
+                        }
+                    });
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_username = false;
+                }
+            });
+
+            //監聽password
+            $("#registerModal_password").bind("input propertychange", function () {
+                if ($(this).val().length > 2 && $(this).val().length < 9) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_password = true;
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_password = false;
+                }
+            });
+
+            //監聽registerModal_re_password
+            $("#registerModal_re_password").bind("input propertychange", function () {
+                if ($(this).val() == $("#registerModal_password").val()) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_re_password = true;
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_re_password = false;
+                }
+            });
+
+            //監聽username
+            $("#registerModal_email").bind("input propertychange", function () {
+                if ($(this).val().length > 2 && $(this).val().length < 16) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_email = true;
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_email = false;
+                }
+            });
+
+            $("#registerModal_chk").change(function () {
+                if ($(this).is(":checked")) {
+                    //打勾 
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_chk = true;
+                } else {
+                    //未打勾
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_chk = false;
+                }
+            });
+
+            //註冊按鈕監聽
+            $("#registerModal_ok_btn").click(function () {
+                if (flag_username && flag_password && flag_re_password && flag_email && flag_chk) {
+                    //傳遞註冊資料至後端API 執行註冊行為
+                    //{"username":"owner01", "password":"123456", "email": "owner@test.com"}
+                    var dataJSON = {};
+                    dataJSON["username"] = $("#registerModal_username").val();
+                    dataJSON["password"] = $("#registerModal_password").val();
+                    dataJSON["email"] = $("#registerModal_email").val();
+                    console.log(JSON.stringify(dataJSON));
+
+                    $.ajax({
+                        type: "POST",
+                        url: "member-register-api.php",
+                        data: JSON.stringify(dataJSON),
+                        dataType: "json",
+                        success: showdata_register,
+                        error: function () {
+                            alert("error-member-register-api.php");
+                        }
+                    });
+
+                } else {
+                    // alert("欄位有錯請修正!");
+                    Swal.fire({
+                        title: "欄位有錯請修正!",
+                        showDenyButton: false,
+                        showCancelButton: false,
+                        confirmButtonText: "Save",
+                        denyButtonText: `Don't save`
+                    }).then((result) => {
+                        /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            Swal.fire("Saved!", "", "success");
+                        } else if (result.isDenied) {
+                            Swal.fire("Changes are not saved", "", "info");
+                        }
+                    });
+                }
+            });
+
+            //**********************************登入登出功能***********************************************
+            //登入按鈕監聽
+            $("#loginModal_ok_btn").click(function () {
+                if ($("#loginModal_username").val() != "" && $("#loginModal_password").val() != "") {
+                    //帳號密碼都有輸入
+                    //傳遞登入資料至後端API 執行登入行為
+                    //{"username":"owner01", "password":"123456"}
+                    var dataJSON = {};
+                    dataJSON["username"] = $("#loginModal_username").val();
+                    dataJSON["password"] = $("#loginModal_password").val();
+
+                    console.log(JSON.stringify(dataJSON));
+
+                    $.ajax({
+                        type: "POST",
+                        url: "member-login-api.php",
+                        data: JSON.stringify(dataJSON),
+                        dataType: "json",
+                        success: showdata_login,
+                        error: function () {
+                            alert("error-member-login-api.php");
+                        }
+                    });
+
+                } else {
+                    //帳號密碼都有空白欄位
+                    alert("登入錯誤!");
+                }
+            });
+
+            //登出按鈕監聽
+            $("#s02_logout_btn").click(function () {
+                setCookie("uid01", "", 7);
+                location.href = "0730-spa.html";
+            });
+
+        }); //end fun
+
+        function showdata_checkuni(data) {
+            console.log(data);
+            if (data.state) {
+                $("#registerModal_username").removeClass("is-invalid");
+                $("#registerModal_username").addClass("is-valid");
+                flag_username = true;
+            } else {
+                $("#registerModal_username").removeClass("is-valid");
+                $("#registerModal_username").addClass("is-invalid");
+                flag_username = false;
+            }
+        }
+
+        function showdata_register(data) {
+            console.log(data);
+            if (data.state) {
+                alert(data.message);
+                location.href = "0730-spa.html";
+            } else {
+                alert(data.message);
+            }
+        }
+
+        function showdata_login(data) {
+            console.log(data);
+            if (data.state) {
+                if (data.data.State == "1") {
+                    //帳號為啟用狀態
+                    alert(data.message);
+                    //loginModal隱藏
+                    $("#loginModal").modal("hide");
+                    //顯示登入帳號
+                    $("#s02_login_username").text(data.data.Username);
+                    //隱藏登入與註冊按鈕
+                    $("#s02_login_btn").addClass("d-none");
+                    $("#s02_register_btn").addClass("d-none");
+                    //顯示登出按鈕
+                    $("#s02_logout_btn").removeClass("d-none");
+
+                    //顯示vip高級功能
+                    $("#s02_btn01").removeClass("disabled");
+                    $("#s02_btn02").removeClass("disabled");
+                    $("#s02_btn03").removeClass("disabled");
+                    $("#s03").removeClass("d-none");
+                    $("#s04").removeClass("d-none");
+                    $("#s05").removeClass("d-none");
+                    $("#s06").removeClass("d-none");
+                    $("#s07").removeClass("d-none");
+                    $("#s08").removeClass("d-none");
+                    $("#s09").removeClass("d-none");
+                    $("#s10").removeClass("d-none");
+                    $("#s11").removeClass("d-none");
+                    $("#s12").removeClass("d-none");
+                    $("#s13").removeClass("d-none");
+                    $("#s14").removeClass("d-none");
+                    $("#s15").removeClass("d-none");
+                } else {
+                    //帳號為停權狀態
+                    alert(data.message + "該帳號已被停權!");
+                    //loginModal隱藏
+                    $("#loginModal").modal("hide");
+                    //顯示登入帳號
+                    $("#s02_login_username").text(data.data.Username);
+                    //隱藏登入與註冊按鈕
+                    $("#s02_login_btn").addClass("d-none");
+                    $("#s02_register_btn").addClass("d-none");
+                    //顯示登出按鈕
+                    $("#s02_logout_btn").removeClass("d-none");
+                    //顯示停權警告畫面 s16
+                    $("#s16").removeClass("d-none");
+                }
+
+
+                //將uid01寫入cookie
+                setCookie("uid01", data.data.Uid01, 7);
+            } else {
+                alert(data.message);
+            }
+        }
+
+        function showdata_check_uid(data) {
+            console.log(data);
+            if (data.state) {
+                if (data.data.State == "1") {
+                    //帳號為啟用狀態
+                    //顯示登入帳號
+                    $("#s02_login_username").text(data.data.Username);
+                    //隱藏登入與註冊按鈕
+                    $("#s02_login_btn").addClass("d-none");
+                    $("#s02_register_btn").addClass("d-none");
+                    //顯示登出按鈕
+                    $("#s02_logout_btn").removeClass("d-none");
+
+                    //顯示vip高級功能
+                    $("#s02_btn01").removeClass("disabled");
+                    $("#s02_btn02").removeClass("disabled");
+                    $("#s02_btn03").removeClass("disabled");
+                    $("#s03").removeClass("d-none");
+                    $("#s04").removeClass("d-none");
+                    $("#s05").removeClass("d-none");
+                    $("#s06").removeClass("d-none");
+                    $("#s07").removeClass("d-none");
+                    $("#s08").removeClass("d-none");
+                    $("#s09").removeClass("d-none");
+                    $("#s10").removeClass("d-none");
+                    $("#s11").removeClass("d-none");
+                    $("#s12").removeClass("d-none");
+                    $("#s13").removeClass("d-none");
+                    $("#s14").removeClass("d-none");
+                    $("#s15").removeClass("d-none");
+                } else {
+                    //帳號為停權狀態
+                    alert(data.message + "該帳號已被停權!");
+                    //loginModal隱藏
+                    $("#loginModal").modal("hide");
+                    //顯示登入帳號
+                    $("#s02_login_username").text(data.data.Username);
+                    //隱藏登入與註冊按鈕
+                    $("#s02_login_btn").addClass("d-none");
+                    $("#s02_register_btn").addClass("d-none");
+                    //顯示登出按鈕
+                    $("#s02_logout_btn").removeClass("d-none");
+                    //顯示停權警告畫面 s16
+                    $("#s16").removeClass("d-none");
+                }
+            }
+        }
+
+
+
+
+
+        //********************from w3********************
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+    </script>
+</body>
+
+</html>
